@@ -18,6 +18,8 @@
 		C435D0342971B1C200AA9000 /* Breed.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D0332971B1C200AA9000 /* Breed.swift */; };
 		C435D0362971B27000AA9000 /* BreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D0352971B27000AA9000 /* BreedView.swift */; };
 		C435D0382971B4B500AA9000 /* BreedsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D0372971B4B500AA9000 /* BreedsScreen.swift */; };
+		C435D03C2971B76C00AA9000 /* BreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D03B2971B76C00AA9000 /* BreedsService.swift */; };
+		C435D03E2971B7A400AA9000 /* BreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D03D2971B7A400AA9000 /* BreedsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		C435D0332971B1C200AA9000 /* Breed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breed.swift; sourceTree = "<group>"; };
 		C435D0352971B27000AA9000 /* BreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedView.swift; sourceTree = "<group>"; };
 		C435D0372971B4B500AA9000 /* BreedsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsScreen.swift; sourceTree = "<group>"; };
+		C435D03B2971B76C00AA9000 /* BreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsService.swift; sourceTree = "<group>"; };
+		C435D03D2971B7A400AA9000 /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 		C435D02F2971B16B00AA9000 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				C435D03A2971B73F00AA9000 /* ViewModel */,
+				C435D0392971B73300AA9000 /* Service */,
 				C435D0322971B19D00AA9000 /* Views */,
 				C435D0312971B19100AA9000 /* Screen */,
 				C435D0302971B18800AA9000 /* Model */,
@@ -177,6 +183,22 @@
 				C435D0352971B27000AA9000 /* BreedView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C435D0392971B73300AA9000 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C435D03B2971B76C00AA9000 /* BreedsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C435D03A2971B73F00AA9000 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C435D03D2971B7A400AA9000 /* BreedsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,9 +332,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C435D0342971B1C200AA9000 /* Breed.swift in Sources */,
+				C435D03E2971B7A400AA9000 /* BreedsViewModel.swift in Sources */,
 				C435D0052971B08200AA9000 /* ContentView.swift in Sources */,
 				C435D0032971B08200AA9000 /* CatUpApp.swift in Sources */,
 				C435D02E2971B14E00AA9000 /* ApiConstants.swift in Sources */,
+				C435D03C2971B76C00AA9000 /* BreedsService.swift in Sources */,
 				C435D0382971B4B500AA9000 /* BreedsScreen.swift in Sources */,
 				C435D0362971B27000AA9000 /* BreedView.swift in Sources */,
 			);

@@ -12,7 +12,7 @@ struct BreedView: View {
     let item: Breed
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
-            Image(item.image.url)
+            Image("catImage")
                 .resizable()
                 .frame(width: 36, height: 36)
                 .mask(Circle())
@@ -25,7 +25,7 @@ struct BreedView: View {
                     .foregroundStyle(.secondary)
                 Text(item.name)
                     .fontWeight(.semibold)
-                Text(item.weight.metric)
+                Text(item.temperament)
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.secondary)
             }
