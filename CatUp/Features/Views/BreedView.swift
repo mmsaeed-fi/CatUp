@@ -23,7 +23,7 @@ struct BreedView: View {
             AsyncImage(url: URL(string: imageItem.url ?? "")){ phase in
                 if let image = phase.image {
                     image.resizable()
-                        .frame(width: 50, height: 50)
+                        .frame(width: 70, height: 70)
                         .mask(Circle())
                         .padding(12)
                         .background(Color(UIColor.systemBackground).opacity(0.3))

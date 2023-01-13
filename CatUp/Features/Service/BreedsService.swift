@@ -15,10 +15,13 @@ protocol BreedsService {
 final class BreedsServiceImplmentation: BreedsService {
     
     func fetchCatBreedIImageUrl(imageReferenceID: String) async throws -> [BreedImage] {
-        let url = URL(string: "https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=".appending(imageReferenceID))!
-        let (data, _) = try await URLSession.shared.data(from: url)
-        let decoder = JSONDecoder()
-        return try decoder.decode([BreedImage].self, from: data)
+        let baseService : BaseServiceProtocol = BaseService()
+        let parameters :[String:String] = [
+            "limit" : "10",
+            "breed_ids": imageReferenceID
+        ]
+        let reqObj : RequestObject = RequestObject(path: ApiConstants.breedImagesPath, httpMethod: HTTPMethod.get, parameters: parameters, headers: [ApiConstants.headerKey:ApiConstants.headerToken])
+        return try await baseService.request(with: reqObj, decoder: JSONDecoder())
     }
     
     func fetchCatBreeds() async throws -> [Breed] {

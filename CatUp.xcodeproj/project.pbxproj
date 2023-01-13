@@ -37,6 +37,8 @@
 		C435D0622971E2B100AA9000 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D0612971E2B100AA9000 /* RatingView.swift */; };
 		C435D0652971E3E400AA9000 /* SafariWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D0642971E3E400AA9000 /* SafariWrapper.swift */; };
 		C435D0682971E5E200AA9000 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D0672971E5E200AA9000 /* Modifiers.swift */; };
+		C435D06A2971E93E00AA9000 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D0692971E93E00AA9000 /* TagView.swift */; };
+		C435D06C2971F1C900AA9000 /* BreedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D06B2971F1C900AA9000 /* BreedTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		C435D0612971E2B100AA9000 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		C435D0642971E3E400AA9000 /* SafariWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWrapper.swift; sourceTree = "<group>"; };
 		C435D0672971E5E200AA9000 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		C435D0692971E93E00AA9000 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		C435D06B2971F1C900AA9000 /* BreedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C435D0132971B08300AA9000 /* CatUpTests.swift */,
+				C435D06B2971F1C900AA9000 /* BreedTests.swift */,
 			);
 			path = CatUpTests;
 			sourceTree = "<group>";
@@ -222,6 +227,7 @@
 				C435D0352971B27000AA9000 /* BreedView.swift */,
 				C435D05F2971E28200AA9000 /* BreedImagesView.swift */,
 				C435D0612971E2B100AA9000 /* RatingView.swift */,
+				C435D0692971E93E00AA9000 /* TagView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 				C435D0602971E28200AA9000 /* BreedImagesView.swift in Sources */,
 				C435D03C2971B76C00AA9000 /* BreedsService.swift in Sources */,
 				C435D0382971B4B500AA9000 /* BreedsScreen.swift in Sources */,
+				C435D06A2971E93E00AA9000 /* TagView.swift in Sources */,
 				C435D0362971B27000AA9000 /* BreedView.swift in Sources */,
 				C435D04A2971C07F00AA9000 /* HTTPStatus.swift in Sources */,
 				C435D0652971E3E400AA9000 /* SafariWrapper.swift in Sources */,
@@ -462,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C435D06C2971F1C900AA9000 /* BreedTests.swift in Sources */,
 				C435D0142971B08300AA9000 /* CatUpTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

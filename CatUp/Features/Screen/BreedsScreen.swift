@@ -31,7 +31,7 @@ struct BreedsScreen: View {
                         NavigationLink{
                             BreedDetailScreen(breed: item)
                         } label: {
-                            BreedView(item: item, imageItem: BreedImage(id: "0XYvRd7oD", width: 1204, height: 1445, url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"))
+                            BreedView(item: item, imageItem: item.image!)
                         }
                         
                     }
