@@ -38,6 +38,7 @@ struct BreedDetailScreen: View {
         }
         .frame(maxWidth: .infinity)
         .frame(height: 300)
+        .background(Color.gray)
         .overlay(
             BreedImagesView(catimage: catBreedImagesViewModel.breedimages)
         )
@@ -53,6 +54,9 @@ struct BreedDetailScreen: View {
             Text("Description")
                 .font(.title3).fontWeight(.medium)
             Text(breed.description)
+            Text("Weight")
+                .font(.title3).fontWeight(.medium)
+            Text("\(breed.weight.metric) kgs")
             VStack(alignment: .leading, spacing: 10) {
                 
                 RatingView(rating: breed.adaptability, ratingHeader: "Adaptability")

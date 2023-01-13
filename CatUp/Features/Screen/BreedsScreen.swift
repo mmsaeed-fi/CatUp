@@ -31,7 +31,7 @@ struct BreedsScreen: View {
                         NavigationLink{
                             BreedDetailScreen(breed: item)
                         } label: {
-                            BreedView(item: item, imageItem: item.image!)
+                            BreedView(item: item, imageItem: item.image ?? BreedImage(id: "", width: 70, height: 70, url: "catImage"))
                         }
                         
                     }
