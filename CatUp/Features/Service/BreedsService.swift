@@ -14,8 +14,8 @@ protocol BreedsService {
 final class BreedsServiceImplmentation: BreedsService {
     
     func fetchCatBreeds() async throws -> [Breed] {
-        let dogURL = URL(string: "https://api.thecatapi.com/v1/breeds")!
-        let (data, _) = try await URLSession.shared.data(from: dogURL)
-        return try JSONDecoder().decode([Breed].self, from: data)
+        let baseService : BaseServiceProtocol = BaseService()
+        let reqObj : RequestObject = RequestObject(path: ApiConstants.breedsPath, httpMethod: HTTPMethod.get, parameters: ["":""], headers: [ApiConstants.headerKey:ApiConstants.headerToken])
+        return try await baseService.request(with: reqObj, decoder: JSONDecoder())
     }
 }
