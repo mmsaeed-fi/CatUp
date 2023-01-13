@@ -8,8 +8,8 @@
 import Foundation
 
 enum ApiConstants {
-    static let baseUrl = "api.thecatapi.com/v1"
-    static let breedsPath = "/breeds"
+    static let baseUrl = "api.thecatapi.com"
+    static let breedsPath = "/v1/breeds"
     static let headerKey = "x-api-key"
     static let headerToken = "live_kgzhSTu3jIRNqO2LPsGvMoKz3qsUgrKlbC8Aop1RTQNCVafbhGe9IJPeQ58eo79H"
 }

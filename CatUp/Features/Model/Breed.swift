@@ -67,12 +67,11 @@ struct Breed: Codable {
     let adaptability, affectionLevel, childFriendly, dogFriendly: Int
     let energyLevel, grooming, healthIssues, intelligence: Int
     let sheddingLevel, socialNeeds, strangerFriendly, vocalisation: Int
-    let experimental, hairless, natural, rare: Int
-    let rex, suppressedTail, shortLegs: Int
+    let isExperimental, isHairless, isNatural, isRare, isRex, hasSuppressedTail, hasShortLegs: Int
     let wikipediaURL: String?
     let hypoallergenic: Int
-  //  let referenceImageID: String
-   // let image: BreedImage
+    //  let referenceImageID: String
+    let image: BreedImage?
 
     enum CodingKeys: String, CodingKey {
         case weight, id, name
@@ -94,20 +93,20 @@ struct Breed: Codable {
         case sheddingLevel = "shedding_level"
         case socialNeeds = "social_needs"
         case strangerFriendly = "stranger_friendly"
-        case vocalisation, experimental, hairless, natural, rare, rex
-        case suppressedTail = "suppressed_tail"
-        case shortLegs = "short_legs"
+        case vocalisation
+        case isExperimental = "experimental"
+        case isHairless = "hairless"
+        case isNatural = "natural"
+        case isRare = "rare"
+        case isRex = "rex"
+        case hasSuppressedTail = "suppressed_tail"
+        case hasShortLegs = "short_legs"
         case wikipediaURL = "wikipedia_url"
         case hypoallergenic
+        case image
       //  case referenceImageID = "reference_image_id"
        // case image
     }
-}
-
-struct BreedImage: Codable {
-    let id: String
-    let width, height: Int
-    let url: String
 }
 
 struct BreedWeight: Codable {
@@ -117,10 +116,10 @@ struct BreedWeight: Codable {
 extension Breed {
     
     static let dummyData: [Breed] = [
-        Breed(weight: BreedWeight(imperial: "7 - 10", metric: "3 - 5"), id: "abys", name: "Abyssinian", temperament: "Active, Energetic, Independent, Intelligent, Gentle", origin: "Egypt", countryCodes: "", countryCode: "EG", description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.", lifeSpan: "14 - 15", indoor: 0, lap: 0, altNames: "", adaptability: 5, affectionLevel: 5, childFriendly: 3, dogFriendly: 4, energyLevel: 5, grooming: 1, healthIssues: 2, intelligence: 5, sheddingLevel: 2, socialNeeds: 5, strangerFriendly: 5, vocalisation: 3, experimental: 5, hairless: 0, natural: 2, rare: 0, rex: 0, suppressedTail: 0, shortLegs: 1, wikipediaURL: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", hypoallergenic: 0),
-        Breed(weight: BreedWeight(imperial: "7 - 10", metric: "3 - 5"), id: "abys", name: "Abyssinian", temperament: "Active, Energetic, Independent, Intelligent, Gentle", origin: "Egypt", countryCodes: "", countryCode: "EG", description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.", lifeSpan: "14 - 15", indoor: 0, lap: 0, altNames: "", adaptability: 5, affectionLevel: 5, childFriendly: 3, dogFriendly: 4, energyLevel: 5, grooming: 1, healthIssues: 2, intelligence: 5, sheddingLevel: 2, socialNeeds: 5, strangerFriendly: 5, vocalisation: 3, experimental: 5, hairless: 0, natural: 2, rare: 0, rex: 0, suppressedTail: 0, shortLegs: 1, wikipediaURL: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", hypoallergenic: 0),
-        Breed(weight: BreedWeight(imperial: "7 - 10", metric: "3 - 5"), id: "abys", name: "Abyssinian", temperament: "Active, Energetic, Independent, Intelligent, Gentle", origin: "Egypt", countryCodes: "", countryCode: "EG", description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.", lifeSpan: "14 - 15", indoor: 0, lap: 0, altNames: "", adaptability: 5, affectionLevel: 5, childFriendly: 3, dogFriendly: 4, energyLevel: 5, grooming: 1, healthIssues: 2, intelligence: 5, sheddingLevel: 2, socialNeeds: 5, strangerFriendly: 5, vocalisation: 3, experimental: 5, hairless: 0, natural: 2, rare: 0, rex: 0, suppressedTail: 0, shortLegs: 1, wikipediaURL: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", hypoallergenic: 0),
-        Breed(weight: BreedWeight(imperial: "7 - 10", metric: "3 - 5"), id: "abys", name: "Abyssinian", temperament: "Active, Energetic, Independent, Intelligent, Gentle", origin: "Egypt", countryCodes: "", countryCode: "EG", description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.", lifeSpan: "14 - 15", indoor: 0, lap: 0, altNames: "", adaptability: 5, affectionLevel: 5, childFriendly: 3, dogFriendly: 4, energyLevel: 5, grooming: 1, healthIssues: 2, intelligence: 5, sheddingLevel: 2, socialNeeds: 5, strangerFriendly: 5, vocalisation: 3, experimental: 5, hairless: 0, natural: 2, rare: 0, rex: 0, suppressedTail: 0, shortLegs: 1, wikipediaURL: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", hypoallergenic: 0)
+        Breed(weight: BreedWeight(imperial: "7 - 10", metric: "3 - 5"), id: "abys", name: "Abyssinian", temperament: "Active, Energetic, Independent, Intelligent, Gentle", origin: "Egypt", countryCodes: "", countryCode: "EG", description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.", lifeSpan: "14 - 15", indoor: 0, lap: 0, altNames: "", adaptability: 5, affectionLevel: 5, childFriendly: 3, dogFriendly: 4, energyLevel: 5, grooming: 1, healthIssues: 2, intelligence: 5, sheddingLevel: 2, socialNeeds: 5, strangerFriendly: 5, vocalisation: 3, isExperimental: 5, isHairless: 0, isNatural: 2, isRare: 0, isRex: 0, hasSuppressedTail: 0, hasShortLegs: 1, wikipediaURL: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", hypoallergenic: 0, image: BreedImage(id: "0XYvRd7oD", width: 1204, height: 1445, url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
+        Breed(weight: BreedWeight(imperial: "7 - 10", metric: "3 - 5"), id: "abys", name: "Abyssinian", temperament: "Active, Energetic, Independent, Intelligent, Gentle", origin: "Egypt", countryCodes: "", countryCode: "EG", description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.", lifeSpan: "14 - 15", indoor: 0, lap: 0, altNames: "", adaptability: 5, affectionLevel: 5, childFriendly: 3, dogFriendly: 4, energyLevel: 5, grooming: 1, healthIssues: 2, intelligence: 5, sheddingLevel: 2, socialNeeds: 5, strangerFriendly: 5, vocalisation: 3, isExperimental: 5, isHairless: 0, isNatural: 2, isRare: 0, isRex: 0, hasSuppressedTail: 0, hasShortLegs: 1, wikipediaURL: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", hypoallergenic: 0,image:BreedImage(id: "0XYvRd7oD", width: 1204, height: 1445, url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
+        Breed(weight: BreedWeight(imperial: "7 - 10", metric: "3 - 5"), id: "abys", name: "Abyssinian", temperament: "Active, Energetic, Independent, Intelligent, Gentle", origin: "Egypt", countryCodes: "", countryCode: "EG", description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.", lifeSpan: "14 - 15", indoor: 0, lap: 0, altNames: "", adaptability: 5, affectionLevel: 5, childFriendly: 3, dogFriendly: 4, energyLevel: 5, grooming: 1, healthIssues: 2, intelligence: 5, sheddingLevel: 2, socialNeeds: 5, strangerFriendly: 5, vocalisation: 3, isExperimental: 5, isHairless: 0, isNatural: 2, isRare: 0, isRex: 0, hasSuppressedTail: 0, hasShortLegs: 1, wikipediaURL: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", hypoallergenic: 0,image: BreedImage(id: "0XYvRd7oD", width: 1204, height: 1445, url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg")),
+        Breed(weight: BreedWeight(imperial: "7 - 10", metric: "3 - 5"), id: "abys", name: "Abyssinian", temperament: "Active, Energetic, Independent, Intelligent, Gentle", origin: "Egypt", countryCodes: "", countryCode: "EG", description: "The Abyssinian is easy to care for, and a joy to have in your home. They’re affectionate cats and love both people and other animals.", lifeSpan: "14 - 15", indoor: 0, lap: 0, altNames: "", adaptability: 5, affectionLevel: 5, childFriendly: 3, dogFriendly: 4, energyLevel: 5, grooming: 1, healthIssues: 2, intelligence: 5, sheddingLevel: 2, socialNeeds: 5, strangerFriendly: 5, vocalisation: 3, isExperimental: 5, isHairless: 0, isNatural: 2, isRare: 0, isRex: 0, hasSuppressedTail: 0, hasShortLegs: 1, wikipediaURL: "https://en.wikipedia.org/wiki/Abyssinian_(cat)", hypoallergenic: 0,image: BreedImage(id: "0XYvRd7oD", width: 1204, height: 1445, url: "https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg"))
     ]
     
     static let dummyImageData: [BreedImage] = [

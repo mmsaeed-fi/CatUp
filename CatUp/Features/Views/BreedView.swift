@@ -20,7 +20,7 @@ struct BreedView: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: 16) {
-            AsyncImage(url: URL(string: imageItem.url)){ phase in
+            AsyncImage(url: URL(string: imageItem.url ?? "")){ phase in
                 if let image = phase.image {
                     image.resizable()
                         .frame(width: 50, height: 50)
