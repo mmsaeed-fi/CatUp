@@ -16,7 +16,7 @@ final class BreedsViewModelImplementation: BreedsViewModel{
     
     @Published private(set) var breeds: [Breed] = []
     
-    private let service: BreedsService
+    let service: BreedsService
     
     init(service: BreedsService) {
         self.service = service
