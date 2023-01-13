@@ -20,6 +20,7 @@
 		C435D0382971B4B500AA9000 /* BreedsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D0372971B4B500AA9000 /* BreedsScreen.swift */; };
 		C435D03C2971B76C00AA9000 /* BreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D03B2971B76C00AA9000 /* BreedsService.swift */; };
 		C435D03E2971B7A400AA9000 /* BreedsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D03D2971B7A400AA9000 /* BreedsViewModel.swift */; };
+		C435D0402971BDD400AA9000 /* BreedDetailsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C435D03F2971BDD400AA9000 /* BreedDetailsScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C435D0372971B4B500AA9000 /* BreedsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsScreen.swift; sourceTree = "<group>"; };
 		C435D03B2971B76C00AA9000 /* BreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsService.swift; sourceTree = "<group>"; };
 		C435D03D2971B7A400AA9000 /* BreedsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewModel.swift; sourceTree = "<group>"; };
+		C435D03F2971BDD400AA9000 /* BreedDetailsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailsScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				C435D0372971B4B500AA9000 /* BreedsScreen.swift */,
+				C435D03F2971BDD400AA9000 /* BreedDetailsScreen.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				C435D0342971B1C200AA9000 /* Breed.swift in Sources */,
 				C435D03E2971B7A400AA9000 /* BreedsViewModel.swift in Sources */,
 				C435D0052971B08200AA9000 /* ContentView.swift in Sources */,
+				C435D0402971BDD400AA9000 /* BreedDetailsScreen.swift in Sources */,
 				C435D0032971B08200AA9000 /* CatUpApp.swift in Sources */,
 				C435D02E2971B14E00AA9000 /* ApiConstants.swift in Sources */,
 				C435D03C2971B76C00AA9000 /* BreedsService.swift in Sources */,
